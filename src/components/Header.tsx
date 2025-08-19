@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Clock, ChevronDown, Menu, X } from "lucide-react";
+import { Phone, Clock, ChevronDown, Menu, X, Facebook } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 const Header = () => {
@@ -148,6 +148,9 @@ const Header = () => {
               <Clock className="h-4 w-4 text-primary" />
               <span className="text-muted-foreground">24/7 Emergency</span>
             </div>
+            <a href="https://www.facebook.com/UNITEDCCR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Follow us on Facebook">
+              <Facebook className="h-5 w-5" />
+            </a>
             <a href="tel:8324668792">
               <Button variant="emergency" size="lg" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
@@ -227,12 +230,17 @@ const Header = () => {
                   <Clock className="h-4 w-4 text-primary" />
                   <span className="text-muted-foreground">24/7 Emergency</span>
                 </div>
-                <a href="tel:8324668792" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="emergency" size="lg" className="w-full flex items-center justify-center space-x-2">
-                    <Phone className="h-4 w-4" />
-                    <span>(832) 466-8792</span>
-                  </Button>
-                </a>
+                <div className="flex items-center justify-between mb-4">
+                  <a href="tel:8324668792" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Button variant="emergency" size="lg" className="flex items-center justify-center space-x-2">
+                      <Phone className="h-4 w-4" />
+                      <span>(832) 466-8792</span>
+                    </Button>
+                  </a>
+                  <a href="https://www.facebook.com/UNITEDCCR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors p-2" aria-label="Follow us on Facebook">
+                    <Facebook className="h-6 w-6" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

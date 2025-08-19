@@ -30,7 +30,7 @@ const About = () => {
         {/* Mission Statement */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
-            We're proud to introduce United CCR (Construct, Clean, Restore)
+            We're proud to introduce United CCR<br className="hidden sm:block" /> (Construct, Clean, Restore)
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
             Your trusted partner for disaster restoration across Texas. From corporate offices and medical facilities to luxury retail and large-scale developments, our mission is simple. Build with precision, maintain with care, restore with speed. With a commitment to fast response, flawless execution, and uncompromising quality, United CCR is here to restore your property after disaster strikes.

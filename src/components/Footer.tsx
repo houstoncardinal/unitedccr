@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, MapPin, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,26 +7,15 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              {/* Logo Image */}
-              <img 
-                src="/logo.jpg" 
-                alt="UNITED Logo" 
-                className="h-10 md:h-14 w-auto"
-              />
+            <div className="mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-white">United CCR</h2>
             </div>
             <p className="text-white/80 mb-6">
-              We're proud to introduce United CCR (Construct, Clean, Restore) - your trusted partner for disaster restoration across Texas. With a commitment to fast response, flawless execution, and uncompromising quality, United CCR is here to restore your property after disaster strikes.
+              We're proud to introduce United CCR<br className="hidden sm:block" /> (Construct, Clean, Restore) - your trusted partner for disaster restoration across Texas. With a commitment to fast response, flawless execution, and uncompromising quality, United CCR is here to restore your property after disaster strikes.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/UNITEDCCR" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors" aria-label="Follow us on Facebook">
                 <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
-                <Linkedin className="h-6 w-6" />
               </a>
             </div>
           </div>
@@ -41,6 +30,7 @@ const Footer = () => {
               <li><a href="/disaster-restoration/mold-remediation" className="hover:text-white transition-colors">Mold Damage Remediation</a></li>
               <li><a href="/disaster-restoration/cleaning-services" className="hover:text-white transition-colors">Cleaning Services</a></li>
               <li><a href="/disaster-restoration/roofing-services" className="hover:text-white transition-colors">Roofing Services</a></li>
+              <li><a href="/disaster-restoration/construction-services" className="hover:text-white transition-colors">Construction Services</a></li>
             </ul>
           </div>
 
@@ -48,12 +38,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-white/80">
+              <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
               <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="/disaster-restoration" className="hover:text-white transition-colors">Services</a></li>
+              <li><a href="/disaster-restoration" className="hover:text-white transition-colors">All Services</a></li>
               <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="/contact" className="hover:text-white transition-colors">Get Free Assessment</a></li>
-              <li><a href="/contact" className="hover:text-white transition-colors">Disaster Restoration</a></li>
-              <li><a href="/contact" className="hover:text-white transition-colors">Texas Properties</a></li>
+
+              <li><a href="tel:8324668792" className="hover:text-white transition-colors">Emergency: (832) 466-8792</a></li>
             </ul>
           </div>
 

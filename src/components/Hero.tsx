@@ -24,7 +24,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-white/95 max-w-2xl leading-relaxed drop-shadow-lg">
-            We're proud to introduce United CCR (Construct, Clean, Restore) - your trusted partner for disaster restoration across Texas. From corporate offices and medical facilities to luxury retail and large-scale developments, our mission is simple. Build with precision, maintain with care, restore with speed.
+            Your trusted partner for disaster restoration across Texas. Emergency response for fire, water, storm, and mold damage. Licensed, insured, and serving Houston & statewide.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-12">

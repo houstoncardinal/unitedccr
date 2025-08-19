@@ -95,7 +95,7 @@ const Services = () => {
                 Our Mission
               </h3>
               <p className="text-white/90 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
-                We're proud to introduce United CCR (Construct, Clean, Restore) - your trusted partner for disaster restoration across Texas. 
+                We're proud to introduce United CCR<br className="hidden sm:block" /> (Construct, Clean, Restore) - your trusted partner for disaster restoration across Texas. 
                 With a commitment to fast response, flawless execution, and uncompromising quality, United CCR is here to restore your property after disaster strikes.
               </p>
               <a href="tel:8324668792">
