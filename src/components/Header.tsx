@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react";
 const Header = () => {
   const [isDisasterMenuOpen, setIsDisasterMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileDisasterMenuOpen, setIsMobileDisasterMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -73,14 +74,14 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center space-x-3">
+            <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
               {/* Logo Image */}
               <img 
                 src="/logo.jpg" 
                 alt="UNITED Logo" 
-                className="h-12 md:h-16 w-auto"
+                className="h-16 md:h-20 w-auto"
               />
-            </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -188,24 +189,34 @@ const Header = () => {
                 
                 {/* Mobile Disaster Restoration Menu */}
                 <div className="space-y-2">
-                  <div className="text-foreground font-medium py-2">Disaster Restoration</div>
-                  {disasterServices.map((service, index) => (
-                    <a
-                      key={index}
-                      href={service.href}
-                      className="block text-sm text-muted-foreground hover:text-primary transition-colors py-2 pl-4"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {service.title}
-                    </a>
-                  ))}
-                  <a
-                    href="/disaster-restoration"
-                    className="block text-sm text-primary hover:text-primary-dark transition-colors py-2 pl-4 font-medium"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                  <button
+                    onClick={() => setIsMobileDisasterMenuOpen(!isMobileDisasterMenuOpen)}
+                    className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium py-2"
                   >
-                    View All Services
-                  </a>
+                    <span>Disaster Restoration</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileDisasterMenuOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isMobileDisasterMenuOpen && (
+                    <div className="space-y-1">
+                      {disasterServices.map((service, index) => (
+                        <a
+                          key={index}
+                          href={service.href}
+                          className="block text-sm text-muted-foreground hover:text-primary transition-colors py-2 pl-4"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {service.title}
+                        </a>
+                      ))}
+                      <a
+                        href="/disaster-restoration"
+                        className="block text-sm text-primary hover:text-primary-dark transition-colors py-2 pl-4 font-medium"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        View All Services
+                      </a>
+                    </div>
+                  )}
                 </div>
                 
                 <a 
