@@ -141,7 +141,8 @@ const Contact = () => {
               <CardTitle className="text-xl md:text-2xl text-primary">Schedule Your Consultation</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form name="contact" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">
+                <input type="hidden" name="bot-field" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">First Name</label>

@@ -266,7 +266,8 @@ const Contact = () => {
                     <p className="text-muted-foreground">Fill out the form below and we'll get back to you within 24 hours.</p>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form name="contact-page" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">
+                      <input type="hidden" name="bot-field" />
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <label className="text-sm font-medium text-foreground mb-2 block">First Name</label>
