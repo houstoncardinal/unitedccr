@@ -3,8 +3,113 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, ArrowRight, Flame, Zap, Home, AlertTriangle, Clock, Shield, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const FireDamageRestoration = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Fire Damage Restoration Services in Texas",
+    "description": "Professional fire damage restoration services in Texas. Complete smoke removal, soot cleanup, and structural restoration. Emergency response available.",
+    "url": "https://unitedccr.com/disaster-restoration/fire-damage",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "United CCR",
+      "alternateName": "United Construct Clean Restore",
+      "description": "Professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation.",
+      "url": "https://unitedccr.com",
+      "logo": "https://unitedccr.com/emblem.jpg",
+      "image": "https://unitedccr.com/thumbnail.png",
+      "telephone": "+1-832-466-8792",
+      "email": "info@unitedccr.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cypress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "29.9691",
+        "longitude": "-95.6972"
+      },
+      "openingHours": "Mo-Su 00:00-23:59",
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card, Insurance",
+      "currenciesAccepted": "USD",
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    },
+    "serviceType": "Fire Damage Restoration",
+    "category": "Disaster Restoration",
+    "areaServed": {
+      "@type": "State",
+      "name": "Texas"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Fire Damage Restoration Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Smoke Damage Cleanup",
+            "description": "Complete removal of smoke residue and soot from all surfaces"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Soot Removal",
+            "description": "Professional soot removal from walls, ceilings, and contents"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Structural Repairs",
+            "description": "Complete structural restoration and rebuilding services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Odor Elimination",
+            "description": "Advanced odor removal and air purification systems"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Sarah Johnson"
+        },
+        "reviewBody": "United CCR responded quickly to our fire damage emergency. Professional service and excellent results."
+      }
+    ]
+  };
+
   const services = [
     {
       title: "Smoke Damage Cleanup",
@@ -75,19 +180,147 @@ const FireDamageRestoration = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Fire Damage Restoration in Texas
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
-              Professional fire damage restoration specialists with emergency response. 
-              Complete smoke removal, soot cleanup, and structural restoration services.
+    <>
+      <SEOHead
+        title="Fire Damage Restoration Services in Texas | United CCR - Emergency Response (832) 466-8792"
+        description="Professional fire damage restoration services in Texas. Complete smoke removal, soot cleanup, and structural restoration. Emergency response available. Call (832) 466-8792."
+        keywords="fire damage restoration, smoke damage cleanup, soot removal, fire damage repair, structural restoration, Texas fire damage, Houston fire damage, emergency fire restoration, fire damage cleanup"
+        canonical="https://unitedccr.com/disaster-restoration/fire-damage"
+        schema={schema}
+      />
+      <div className="min-h-screen bg-background">
+        <Header />
+        
+        {/* Hero Section */}
+        <section className="relative py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Fire Damage Restoration in Texas
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
+                Professional fire damage restoration specialists with emergency response. 
+                Complete smoke removal, soot cleanup, and structural restoration services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:8324668792">
+                  <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
+                    <Phone className="h-5 w-5 mr-2" />
+                    Call Now: (832) 466-8792
+                  </Button>
+                </a>
+                <a href="/contact">
+                  <Button variant="corporate" size="lg" className="text-lg px-8 py-4 h-auto">
+                    Schedule Consultation
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
+                Complete Fire Damage Restoration Services
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                From emergency response to complete restoration, we handle all aspects of fire damage with professional expertise and advanced equipment.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <Card key={index} className="text-center group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                    <CardHeader className="pb-4">
+                      <div className="mx-auto bg-gradient-primary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <IconComponent className="h-8 w-8 text-white" />
+                      </div>
+                      <CardTitle className="text-xl font-bold text-primary group-hover:text-primary-dark transition-colors">
+                        {service.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base text-muted-foreground leading-relaxed">
+                        {service.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-20 bg-secondary/50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
+                Our Fire Damage Restoration Process
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                We follow a systematic approach to ensure complete fire damage restoration with minimal disruption to your life.
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="flex items-start space-x-6">
+                  <div className="bg-gradient-primary text-white text-2xl font-bold w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                    {step.step}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-primary mb-2">{step.title}</h3>
+                    <p className="text-lg text-muted-foreground">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
+                Why Choose United CCR for Fire Damage Restoration?
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                As certified fire damage restoration specialists, we provide fast response, professional service, and complete restoration solutions.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {whyChooseUs.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="mx-auto bg-gradient-primary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                      <IconComponent className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-primary mb-2">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-20 bg-gradient-to-r from-primary to-primary-dark">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              Fire Damage Emergency? We're Available 24/7/365
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Don't wait when fire strikes your Texas property. Contact United CCR immediately for fast, professional fire damage restoration services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:8324668792">
@@ -103,130 +336,11 @@ const FireDamageRestoration = () => {
               </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
-              Complete Fire Damage Restoration Services
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              From emergency response to complete restoration, we handle all aspects of fire damage with professional expertise and advanced equipment.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <Card key={index} className="text-center group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                  <CardHeader className="pb-4">
-                    <div className="mx-auto bg-gradient-primary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                      <IconComponent className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-xl font-bold text-primary group-hover:text-primary-dark transition-colors">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-secondary/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
-              Our Fire Damage Restoration Process
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              We follow a systematic approach to ensure complete fire damage restoration with minimal disruption to your life.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="flex items-start space-x-6">
-                <div className="bg-gradient-primary text-white text-2xl font-bold w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
-                  {step.step}
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">{step.title}</h3>
-                  <p className="text-lg text-muted-foreground">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
-              Why Choose United CCR for Fire Damage Restoration?
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              As certified fire damage restoration specialists, we provide fast response, professional service, and complete restoration solutions.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyChooseUs.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="mx-auto bg-gradient-primary p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <IconComponent className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-primary mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-dark">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            Fire Damage Emergency? We're Available 24/7/365
-          </h2>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Don't wait when fire strikes your Texas property. Contact United CCR immediately for fast, professional fire damage restoration services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:8324668792">
-              <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
-                <Phone className="h-5 w-5 mr-2" />
-                Call Now: (832) 466-8792
-              </Button>
-            </a>
-            <a href="/contact">
-              <Button variant="corporate" size="lg" className="text-lg px-8 py-4 h-auto">
-                Schedule Consultation
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
