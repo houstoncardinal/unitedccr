@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, ArrowRight, Wind, Zap, Home, AlertTriangle, Clock, Shield, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const StormDamageRestoration = () => {
   const services = [
@@ -74,8 +75,79 @@ const StormDamageRestoration = () => {
     }
   ];
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Storm Damage Restoration in Texas",
+    "description": "Professional storm damage restoration services in Texas. Emergency response for roof repairs, structural damage, and storm-related property restoration. Licensed, insured, and serving Houston & statewide.",
+    "url": "https://unitedccr.com/disaster-restoration/storm-damage",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "United CCR",
+      "alternateName": "United Construct Clean Restore",
+      "telephone": "+1-832-466-8792",
+      "email": "info@unitedccr.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cypress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    },
+    "serviceType": "Storm Damage Restoration",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Storm Damage Restoration Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Emergency Tarping",
+            "description": "Emergency roof tarping to prevent further damage"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Roof Repairs",
+            "description": "Complete roof repair and restoration services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Structural Assessment",
+            "description": "Professional structural damage assessment and evaluation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Complete Restoration",
+            "description": "Full storm damage restoration and property repair"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Storm Damage Restoration in Texas | Emergency Roof Repairs & Structural Restoration - United CCR"
+        description="Professional storm damage restoration services in Texas. Emergency response for roof repairs, structural damage, and storm-related property restoration. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        keywords="storm damage restoration Texas, emergency roof repairs, structural damage assessment, storm damage repair, Houston storm damage restoration, United CCR"
+        canonical="https://unitedccr.com/disaster-restoration/storm-damage"
+        schema={schema}
+      />
       <Header />
       
       {/* Hero Section */}

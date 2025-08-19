@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, ArrowRight, Droplets, Trash2, Brush, Shield, AlertTriangle, Zap, Clock, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const CleaningServices = () => {
   const services = [
@@ -74,8 +75,79 @@ const CleaningServices = () => {
     }
   ];
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Post-Disaster Cleaning Services in Texas",
+    "description": "Professional post-disaster cleaning services in Texas. Complete cleaning, sanitization, and content restoration after fire, water, storm, or mold damage. Licensed, insured, and serving Houston & statewide.",
+    "url": "https://unitedccr.com/disaster-restoration/cleaning-services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "United CCR",
+      "alternateName": "United Construct Clean Restore",
+      "telephone": "+1-832-466-8792",
+      "email": "info@unitedccr.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cypress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    },
+    "serviceType": "Post-Disaster Cleaning",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Post-Disaster Cleaning Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Post-Disaster Cleaning",
+            "description": "Complete cleaning and sanitization after disaster damage"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Deep Cleaning",
+            "description": "Deep cleaning and restoration of affected areas"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sanitization",
+            "description": "Professional sanitization and disinfection services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Content Cleaning",
+            "description": "Cleaning and restoration of personal belongings and contents"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Post-Disaster Cleaning Services in Texas | Professional Cleaning & Sanitization - United CCR"
+        description="Professional post-disaster cleaning services in Texas. Complete cleaning, sanitization, and content restoration after fire, water, storm, or mold damage. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        keywords="post-disaster cleaning Texas, disaster cleaning services, sanitization, content cleaning, Houston cleaning services, United CCR"
+        canonical="https://unitedccr.com/disaster-restoration/cleaning-services"
+        schema={schema}
+      />
       <Header />
       
       {/* Hero Section */}

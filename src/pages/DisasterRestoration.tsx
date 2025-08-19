@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, ArrowRight, Flame, Droplets, Wind, Eye, Brush, HardHat, Building } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const DisasterRestoration = () => {
   const allServices = [
@@ -78,8 +79,95 @@ const DisasterRestoration = () => {
     }
   ];
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Disaster Restoration Services in Texas",
+    "description": "Professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Licensed, insured, and serving Houston & statewide.",
+    "url": "https://unitedccr.com/disaster-restoration",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "United CCR",
+      "alternateName": "United Construct Clean Restore",
+      "telephone": "+1-832-466-8792",
+      "email": "info@unitedccr.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cypress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    },
+    "serviceType": "Disaster Restoration",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Disaster Restoration Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fire Damage Restoration",
+            "description": "Complete fire damage cleanup, smoke removal, and structural restoration services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Water Damage Restoration",
+            "description": "Rapid water extraction, drying, and restoration to prevent mold growth"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Storm Damage Restoration",
+            "description": "Emergency storm damage repair including roof, siding, and structural restoration"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mold Remediation",
+            "description": "Professional mold inspection, removal, and prevention services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cleaning Services",
+            "description": "Post-disaster cleaning and sanitization services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Roofing Services",
+            "description": "Emergency roofing repairs and disaster-related roof restoration"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Disaster Restoration Services in Texas | Fire, Water, Storm & Mold Damage - United CCR"
+        description="Professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        keywords="disaster restoration Texas, fire damage restoration, water damage restoration, storm damage restoration, mold remediation, emergency response, property restoration, United CCR, Houston disaster restoration"
+        canonical="https://unitedccr.com/disaster-restoration"
+        schema={schema}
+      />
       <Header />
       
       {/* Hero Section */}

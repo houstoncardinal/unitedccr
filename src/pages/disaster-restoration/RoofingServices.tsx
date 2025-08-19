@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, ArrowRight, Home, Wrench, Building, Hammer, Clock, Shield, CheckCircle, Zap } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const RoofingServices = () => {
   const services = [
@@ -74,8 +75,79 @@ const RoofingServices = () => {
     }
   ];
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Emergency Roofing Services in Texas",
+    "description": "Professional emergency roofing services in Texas. Complete roof repairs, storm damage restoration, and preventive maintenance. Licensed, insured, and serving Houston & statewide.",
+    "url": "https://unitedccr.com/disaster-restoration/roofing-services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "United CCR",
+      "alternateName": "United Construct Clean Restore",
+      "telephone": "+1-832-466-8792",
+      "email": "info@unitedccr.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cypress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    },
+    "serviceType": "Emergency Roofing Services",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Emergency Roofing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Emergency Repairs",
+            "description": "Emergency roof repairs and temporary fixes"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Storm Damage",
+            "description": "Storm damage roof repair and restoration"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fire Damage",
+            "description": "Fire damage roof repair and restoration"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Preventive Maintenance",
+            "description": "Roof preventive maintenance and inspection"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Emergency Roofing Services in Texas | Storm & Fire Damage Roof Repairs - United CCR"
+        description="Professional emergency roofing services in Texas. Complete roof repairs, storm damage restoration, and preventive maintenance. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        keywords="emergency roofing services Texas, roof repairs, storm damage roof repair, fire damage roof repair, Houston roofing services, United CCR"
+        canonical="https://unitedccr.com/disaster-restoration/roofing-services"
+        schema={schema}
+      />
       <Header />
       
       {/* Hero Section */}

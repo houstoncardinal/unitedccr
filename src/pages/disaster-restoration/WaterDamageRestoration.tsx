@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, ArrowRight, Droplets, Zap, Home, AlertTriangle, Clock, Shield, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const WaterDamageRestoration = () => {
   const services = [
@@ -74,8 +75,79 @@ const WaterDamageRestoration = () => {
     }
   ];
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Water Damage Restoration in Texas",
+    "description": "Professional water damage restoration services in Texas. Emergency response for water extraction, structural drying, and mold prevention. Licensed, insured, and serving Houston & statewide.",
+    "url": "https://unitedccr.com/disaster-restoration/water-damage",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "United CCR",
+      "alternateName": "United Construct Clean Restore",
+      "telephone": "+1-832-466-8792",
+      "email": "info@unitedccr.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cypress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    },
+    "serviceType": "Water Damage Restoration",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Water Damage Restoration Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Water Extraction",
+            "description": "Rapid water removal using industrial-grade extraction equipment"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Structural Drying",
+            "description": "Complete structural drying to prevent mold growth and damage"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mold Prevention",
+            "description": "Professional mold prevention and moisture control services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Complete Restoration",
+            "description": "Full restoration of water-damaged areas and contents"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Water Damage Restoration in Texas | Emergency Response & Mold Prevention - United CCR"
+        description="Professional water damage restoration services in Texas. Emergency response for water extraction, structural drying, and mold prevention. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        keywords="water damage restoration Texas, water extraction, structural drying, mold prevention, emergency water damage response, Houston water damage restoration, United CCR"
+        canonical="https://unitedccr.com/disaster-restoration/water-damage"
+        schema={schema}
+      />
       <Header />
       
       {/* Hero Section */}

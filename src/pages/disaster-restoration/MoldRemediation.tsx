@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, ArrowRight, Eye, Zap, Home, AlertTriangle, Clock, Shield, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const MoldRemediation = () => {
   const services = [
@@ -79,8 +80,79 @@ const MoldRemediation = () => {
     }
   ];
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mold Remediation in Texas",
+    "description": "Professional mold remediation services in Texas. Complete mold inspection, safe removal, air quality testing, and prevention solutions. Licensed, insured, and serving Houston & statewide.",
+    "url": "https://unitedccr.com/disaster-restoration/mold-remediation",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "United CCR",
+      "alternateName": "United Construct Clean Restore",
+      "telephone": "+1-832-466-8792",
+      "email": "info@unitedccr.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cypress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    },
+    "serviceType": "Mold Remediation",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Mold Remediation Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mold Inspection",
+            "description": "Professional mold inspection and assessment services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Safe Removal",
+            "description": "Safe and effective mold removal and cleanup"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Air Quality Testing",
+            "description": "Comprehensive air quality testing and monitoring"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Prevention Solutions",
+            "description": "Mold prevention and moisture control solutions"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Mold Remediation in Texas | Professional Mold Removal & Prevention - United CCR"
+        description="Professional mold remediation services in Texas. Complete mold inspection, safe removal, air quality testing, and prevention solutions. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        keywords="mold remediation Texas, mold removal, mold inspection, air quality testing, mold prevention, Houston mold remediation, United CCR"
+        canonical="https://unitedccr.com/disaster-restoration/mold-remediation"
+        schema={schema}
+      />
       <Header />
       
       {/* Hero Section */}

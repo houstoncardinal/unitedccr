@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, ArrowRight, Building, Home, Hammer, Wrench, PaintBucket, Zap, Clock, Shield, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const ConstructionServices = () => {
   const services = [
@@ -74,8 +75,79 @@ const ConstructionServices = () => {
     }
   ];
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Disaster Construction Services in Texas",
+    "description": "Professional disaster construction services in Texas. Complete reconstruction, emergency repairs, and post-disaster construction. Licensed, insured, and serving Houston & statewide.",
+    "url": "https://unitedccr.com/disaster-restoration/construction-services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "United CCR",
+      "alternateName": "United Construct Clean Restore",
+      "telephone": "+1-832-466-8792",
+      "email": "info@unitedccr.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cypress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    },
+    "serviceType": "Disaster Construction Services",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Disaster Construction Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Disaster Reconstruction",
+            "description": "Complete reconstruction of properties damaged by disasters"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Emergency Repairs",
+            "description": "Emergency structural repairs and stabilization"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Post-Disaster Construction",
+            "description": "Construction services after fire, water, or storm damage"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Restoration Construction",
+            "description": "Complete restoration construction and rebuilding"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Disaster Construction Services in Texas | Emergency Repairs & Reconstruction - United CCR"
+        description="Professional disaster construction services in Texas. Complete reconstruction, emergency repairs, and post-disaster construction. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        keywords="disaster construction services Texas, emergency repairs, reconstruction, post-disaster construction, Houston construction services, United CCR"
+        canonical="https://unitedccr.com/disaster-restoration/construction-services"
+        schema={schema}
+      />
       <Header />
       
       {/* Hero Section */}
