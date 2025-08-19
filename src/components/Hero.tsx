@@ -3,7 +3,7 @@ import { Phone, ShieldCheck, Clock } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center">
+    <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center pt-8 md:pt-0 pb-8 md:pb-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -43,20 +43,20 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center gap-4 md:gap-6 text-white/90">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap items-center gap-3 md:gap-6 text-white/90">
             <div className="flex items-center space-x-2">
               <ShieldCheck className="h-4 w-4 md:h-5 md:w-5 text-white flex-shrink-0 drop-shadow-md" />
-              <span className="font-semibold text-sm md:text-base drop-shadow-md">Licensed & Insured</span>
+              <span className="font-semibold text-xs md:text-sm lg:text-base drop-shadow-md">Licensed & Insured</span>
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="h-4 w-4 md:h-5 md:w-5 text-white flex-shrink-0 drop-shadow-md" />
-              <span className="font-semibold text-sm md:text-base drop-shadow-md">Emergency Response</span>
+              <span className="font-semibold text-xs md:text-sm lg:text-base drop-shadow-md">Emergency Response</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="font-semibold text-sm md:text-base drop-shadow-md">Texas Properties Trust Us</span>
+              <span className="font-semibold text-xs md:text-sm lg:text-base drop-shadow-md">Texas Properties Trust Us</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="font-semibold text-sm md:text-base drop-shadow-md">Disaster Restoration Focus</span>
+              <span className="font-semibold text-xs md:text-sm lg:text-base drop-shadow-md">Disaster Restoration Focus</span>
             </div>
           </div>
         </div>
