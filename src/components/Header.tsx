@@ -41,7 +41,7 @@ const Header = () => {
     },
     {
       title: "Construction Services",
-      description: "New builds, rebuilds, and build-outs for all project types",
+      description: "Disaster reconstruction, emergency repairs, and post-disaster construction",
       href: "/disaster-restoration/construction-services"
     }
   ];
