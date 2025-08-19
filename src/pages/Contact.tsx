@@ -6,8 +6,53 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Phone, Mail, MapPin, Clock, MessageSquare, AlertTriangle, Send, CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      // In a real application, you would send this to your backend
+      // For now, we'll just simulate a successful submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setSubmitStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -221,64 +266,122 @@ const Contact = () => {
                     <p className="text-muted-foreground">Fill out the form below and we'll get back to you within 24 hours.</p>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">First Name</label>
-                        <Input placeholder="John" className="shadow-sm" />
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-sm font-medium text-foreground mb-2 block">First Name</label>
+                          <Input 
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleInputChange}
+                            placeholder="First name" 
+                            className="shadow-sm" 
+                            required 
+                          />
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-foreground mb-2 block">Last Name</label>
+                          <Input 
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleInputChange}
+                            placeholder="Last name" 
+                            className="shadow-sm" 
+                            required 
+                          />
+                        </div>
                       </div>
+                      
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">Last Name</label>
-                        <Input placeholder="Doe" className="shadow-sm" />
+                        <label className="text-sm font-medium text-foreground mb-2 block">Email</label>
+                        <Input 
+                          type="email" 
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          placeholder="your.email@example.com" 
+                          className="shadow-sm" 
+                          required 
+                        />
                       </div>
-                    </div>
-                    
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">Email</label>
-                      <Input type="email" placeholder="john@example.com" className="shadow-sm" />
-                    </div>
                     
                     <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">Phone</label>
-                      <Input type="tel" placeholder="(832) 466-8792" className="shadow-sm" />
-                    </div>
-                    
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">Service Needed</label>
-                      <select className="w-full p-3 border border-input rounded-md bg-background shadow-sm">
-                        <option>Select a service...</option>
-                        <option>Commercial Construction</option>
-                        <option>Cleaning & Maintenance</option>
-                        <option>Fire Damage Restoration</option>
-                        <option>Water Damage Restoration</option>
-                        <option>Storm Damage Restoration</option>
-                        <option>Mold Damage Remediation</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">Message</label>
-                      <Textarea 
-                        placeholder="Please describe your business needs or project requirements..."
-                        rows={4}
-                        className="shadow-sm"
+                      <Input 
+                        type="tel" 
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="(555) 123-4567" 
+                        className="shadow-sm" 
+                        required 
                       />
                     </div>
                     
-                    <div className="space-y-3">
-                      <a href="#contact-form">
-                        <Button variant="hero" size="lg" className="w-full shadow-lg hover:shadow-xl transition-all duration-300">
+                      <div>
+                        <label className="text-sm font-medium text-foreground mb-2 block">Service Needed</label>
+                        <select 
+                          name="service"
+                          value={formData.service}
+                          onChange={handleInputChange}
+                          className="w-full p-3 border border-input rounded-md bg-background shadow-sm"
+                          required
+                        >
+                          <option value="">Select a service...</option>
+                          <option value="commercial-construction">Commercial Construction</option>
+                          <option value="cleaning-maintenance">Cleaning & Maintenance</option>
+                          <option value="fire-damage">Fire Damage Restoration</option>
+                          <option value="water-damage">Water Damage Restoration</option>
+                          <option value="storm-damage">Storm Damage Restoration</option>
+                          <option value="mold-remediation">Mold Damage Remediation</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      
+                      <div>
+                        <label className="text-sm font-medium text-foreground mb-2 block">Message</label>
+                        <Textarea 
+                          name="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          placeholder="Please describe your business needs or project requirements..."
+                          rows={4}
+                          className="shadow-sm"
+                          required
+                        />
+                      </div>
+
+                      {submitStatus === 'success' && (
+                        <div className="p-4 bg-green-50 border border-green-200 rounded-md">
+                          <p className="text-green-800 text-sm">Thank you! Your message has been sent. We'll contact you within 24 hours.</p>
+                        </div>
+                      )}
+
+                      {submitStatus === 'error' && (
+                        <div className="p-4 bg-red-50 border border-red-200 rounded-md">
+                          <p className="text-red-800 text-sm">There was an error sending your message. Please try again or call us directly.</p>
+                        </div>
+                      )}
+                      
+                      <div className="space-y-3">
+                        <Button 
+                          type="submit" 
+                          variant="hero" 
+                          size="lg" 
+                          className="w-full shadow-lg hover:shadow-xl transition-all duration-300"
+                          disabled={isSubmitting}
+                        >
                           <Send className="h-4 w-4 mr-2" />
-                          Schedule Consultation
+                          {isSubmitting ? 'Sending...' : 'Schedule Consultation'}
                         </Button>
-                      </a>
-                      <a href="tel:8324668792">
-                        <Button variant="emergency" size="lg" className="w-full shadow-lg hover:shadow-xl transition-all duration-300">
-                          <Phone className="h-4 w-4 mr-2" />
-                          Call Now: (832) 466-8792
-                        </Button>
-                      </a>
-                    </div>
+                        <a href="tel:8324668792">
+                          <Button variant="emergency" size="lg" className="w-full shadow-lg hover:shadow-xl transition-all duration-300">
+                            <Phone className="h-4 w-4 mr-2" />
+                            Call Now: (832) 466-8792
+                          </Button>
+                        </a>
+                      </div>
+                    </form>
                   </CardContent>
                 </Card>
               </div>

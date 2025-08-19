@@ -2,9 +2,54 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Send } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      // In a real application, you would send this to your backend
+      // For now, we'll just simulate a successful submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setSubmitStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-4">
@@ -96,62 +141,117 @@ const Contact = () => {
               <CardTitle className="text-xl md:text-2xl text-primary">Schedule Your Consultation</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">First Name</label>
-                  <Input placeholder="John" />
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">First Name</label>
+                    <Input 
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      placeholder="First name" 
+                      required 
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">Last Name</label>
+                    <Input 
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      placeholder="Last name" 
+                      required 
+                    />
+                  </div>
                 </div>
+                
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">Last Name</label>
-                  <Input placeholder="Doe" />
+                  <label className="text-sm font-medium text-foreground mb-2 block">Email</label>
+                  <Input 
+                    type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="your.email@example.com" 
+                    required 
+                  />
                 </div>
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Email</label>
-                <Input type="email" placeholder="john@example.com" />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Phone</label>
-                <Input type="tel" placeholder="(832) 466-8792" />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Service Needed</label>
-                <select className="w-full p-3 border border-input rounded-md bg-background">
-                  <option>Select a service...</option>
-                  <option>Fire Damage Restoration</option>
-                  <option>Water Damage Restoration</option>
-                  <option>Storm Damage Restoration</option>
-                  <option>Mold Damage Remediation</option>
-                  <option>Cleaning Services</option>
-                  <option>Roofing Services</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Message</label>
-                <Textarea 
-                  placeholder="Please describe your disaster damage or restoration needs..."
-                  rows={4}
-                />
-              </div>
-              
-              <div className="space-y-3">
-                <a href="/contact" className="block">
-                  <Button variant="hero" size="lg" className="w-full">
-                    Schedule Consultation
+                
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">Phone</label>
+                  <Input 
+                    type="tel" 
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="(555) 123-4567" 
+                    required 
+                  />
+                </div>
+                
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">Service Needed</label>
+                  <select 
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className="w-full p-3 border border-input rounded-md bg-background"
+                    required
+                  >
+                    <option value="">Select a service...</option>
+                    <option value="fire-damage">Fire Damage Restoration</option>
+                    <option value="water-damage">Water Damage Restoration</option>
+                    <option value="storm-damage">Storm Damage Restoration</option>
+                    <option value="mold-remediation">Mold Damage Remediation</option>
+                    <option value="cleaning">Cleaning Services</option>
+                    <option value="roofing">Roofing Services</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">Message</label>
+                  <Textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Please describe your disaster damage or restoration needs..."
+                    rows={4}
+                    required
+                  />
+                </div>
+
+                {submitStatus === 'success' && (
+                  <div className="p-4 bg-green-50 border border-green-200 rounded-md">
+                    <p className="text-green-800 text-sm">Thank you! Your message has been sent. We'll contact you within 24 hours.</p>
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-md">
+                    <p className="text-red-800 text-sm">There was an error sending your message. Please try again or call us directly.</p>
+                  </div>
+                )}
+                
+                <div className="space-y-3">
+                  <Button 
+                    type="submit" 
+                    variant="hero" 
+                    size="lg" 
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
+                    <Send className="h-4 w-4 mr-2" />
+                    {isSubmitting ? 'Sending...' : 'Schedule Consultation'}
                   </Button>
-                </a>
-                <a href="tel:8324668792" className="block">
-                  <Button variant="emergency" size="lg" className="w-full">
-                    <Phone className="h-4 w-4 mr-2" />
-                    Call Now: (832) 466-8792
-                  </Button>
-                </a>
-              </div>
+                  <a href="tel:8324668792" className="block">
+                    <Button variant="emergency" size="lg" className="w-full">
+                      <Phone className="h-4 w-4 mr-2" />
+                      Call Now: (832) 466-8792
+                    </Button>
+                  </a>
+                </div>
+              </form>
             </CardContent>
           </Card>
         </div>

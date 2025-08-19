@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, Clock } from "lucide-react";
-import heroImage from "@/assets/hero-restoration.jpg";
 
 const Hero = () => {
   return (
@@ -8,22 +7,23 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroImage} 
+          src="/hero.jpg" 
           alt="Professional disaster restoration services" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-primary-dark/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70"></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl text-white">
-          <div className="text-base md:text-lg font-semibold text-white mb-3">UNITED CCR</div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
-            Construct, Clean, Restore
+          <div className="text-base md:text-lg font-semibold text-white mb-3 drop-shadow-lg">UNITED CCR</div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6 drop-shadow-xl">
+            Construct, Clean, Restore<span className="text-blue-900">.</span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-white/90 max-w-2xl leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-white/95 max-w-2xl leading-relaxed drop-shadow-lg">
             We're proud to introduce United CCR (Construct, Clean, Restore) - your trusted partner for disaster restoration across Texas. From corporate offices and medical facilities to luxury retail and large-scale developments, our mission is simple. Build with precision, maintain with care, restore with speed.
           </p>
 
@@ -43,20 +43,20 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center gap-4 md:gap-6 text-white/80">
+          <div className="flex flex-wrap items-center gap-4 md:gap-6 text-white/90">
             <div className="flex items-center space-x-2">
-              <ShieldCheck className="h-4 w-4 md:h-5 md:w-5 text-white flex-shrink-0" />
-              <span className="font-semibold text-sm md:text-base">Licensed & Insured</span>
+              <ShieldCheck className="h-4 w-4 md:h-5 md:w-5 text-white flex-shrink-0 drop-shadow-md" />
+              <span className="font-semibold text-sm md:text-base drop-shadow-md">Licensed & Insured</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Clock className="h-4 w-4 md:h-5 md:w-5 text-white flex-shrink-0" />
-              <span className="font-semibold text-sm md:text-base">Emergency Response</span>
+              <Clock className="h-4 w-4 md:h-5 md:w-5 text-white flex-shrink-0 drop-shadow-md" />
+              <span className="font-semibold text-sm md:text-base drop-shadow-md">Emergency Response</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="font-semibold text-sm md:text-base">Texas Properties Trust Us</span>
+              <span className="font-semibold text-sm md:text-base drop-shadow-md">Texas Properties Trust Us</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="font-semibold text-sm md:text-base">Disaster Restoration Focus</span>
+              <span className="font-semibold text-sm md:text-base drop-shadow-md">Disaster Restoration Focus</span>
             </div>
           </div>
         </div>
