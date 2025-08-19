@@ -1,104 +1,110 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Flame, Droplets, Zap, Home, Brush, HardHat, Phone } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 
 const services = [
   {
-    icon: Flame,
-    title: "Fire Damage Restoration",
-    description: "Complete fire damage cleanup, smoke removal, and structural restoration with advanced equipment and techniques.",
-    features: ["Smoke & Soot Removal", "Odor Elimination", "Structural Repairs", "Content Restoration"]
+    title: "Disaster Restoration",
+    description: "Complete disaster restoration services for properties affected by fire, water, storm, or mold damage.",
+    features: ["Fire Damage", "Water Damage", "Storm Damage", "Mold Remediation"],
+    href: "/disaster-restoration"
   },
   {
-    icon: Droplets,
-    title: "Water Damage Restoration",
-    description: "Fast water extraction, drying, and restoration to prevent mold growth and structural damage.",
-    features: ["Water Extraction", "Structural Drying", "Mold Prevention", "Dehumidification"]
-  },
-  {
-    icon: Zap,
-    title: "Storm Damage Restoration",
-    description: "Emergency storm damage repair including roof, siding, windows, and structural restoration.",
-    features: ["Emergency Tarping", "Structural Assessment", "Debris Removal", "Complete Restoration"]
-  },
-  {
-    icon: Home,
-    title: "Mold Damage Remediation",
-    description: "Professional mold inspection, removal, and prevention with certified technicians and equipment.",
-    features: ["Mold Inspection", "Safe Removal", "Air Quality Testing", "Prevention Solutions"]
-  },
-  {
-    icon: Brush,
     title: "Cleaning Services",
-    description: "Professional cleaning services for residential and commercial properties after damage restoration.",
-    features: ["Deep Cleaning", "Sanitization", "Carpet Cleaning", "Air Duct Cleaning"]
+    description: "Professional cleaning services for properties after disaster damage restoration.",
+    features: ["Post-Disaster Cleaning", "Sanitization", "Carpet Cleaning", "Air Duct Cleaning"],
+    href: "/disaster-restoration/cleaning-services"
   },
   {
-    icon: HardHat,
-    title: "Construction & Roofing",
-    description: "Full construction and roofing services from repairs to complete renovations and new construction.",
-    features: ["Roof Replacement", "Siding Installation", "Interior Renovations", "New Construction"]
+    title: "Roofing Services",
+    description: "Emergency roofing services for properties damaged by storms, fire, or other disasters.",
+    features: ["Emergency Repairs", "Storm Damage", "Fire Damage", "Preventive Maintenance"],
+    href: "/disaster-restoration/roofing-services"
   }
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-secondary/50">
+    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            Our Professional Services
+          <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+            Our Disaster Restoration Services
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 leading-tight">
+            Professional Disaster Restoration for Texas
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive restoration and construction services with 24/7 emergency response.
-            Licensed, insured, and committed to restoring your property to better than new.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            United CCR delivers premium disaster restoration services for Texas properties affected by fire, water, storm, or mold damage. 
+            From emergency response to complete restoration, we provide fast response.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="shadow-soft hover:shadow-strong transition-all duration-300 border-border/50">
-              <CardHeader>
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="p-3 bg-gradient-primary rounded-lg">
-                    <service.icon className="h-6 w-6 text-white" />
+            <Card key={index} className="group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white">
+              <CardHeader className="relative pb-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="p-4 border-2 border-primary/20 rounded-2xl group-hover:border-primary/40 transition-all duration-500 transform group-hover:scale-110 bg-white">
+                    <img 
+                      src="/emblem.JPG" 
+                      alt="United CCR Emblem" 
+                      className="h-8 w-8 object-contain"
+                    />
                   </div>
-                  <CardTitle className="text-xl font-bold text-primary">{service.title}</CardTitle>
+                  <CardTitle className="text-xl md:text-2xl font-bold text-primary group-hover:text-primary-dark transition-colors">
+                    {service.title}
+                  </CardTitle>
                 </div>
-                <CardDescription className="text-base text-muted-foreground">
+                <CardDescription className="text-base text-muted-foreground leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 mb-6">
+              <CardContent className="relative">
+                <ul className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-sm">
-                      <div className="h-2 w-2 bg-accent rounded-full"></div>
-                      <span>{feature}</span>
+                    <li key={featureIndex} className="flex items-center space-x-3 text-sm">
+                      <div className="h-2 w-2 bg-primary rounded-full shadow-sm"></div>
+                      <span className="font-medium text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="w-full">
-                  Learn More
-                </Button>
+                <a href={service.href}>
+                  <Button 
+                    variant="outline" 
+                    className="w-full group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300 shadow-md hover:shadow-lg"
+                  >
+                    <span>Learn More</span>
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Emergency CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-accent p-8 rounded-2xl shadow-emergency">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Emergency? We're Available 24/7
-            </h3>
-            <p className="text-white/90 mb-6 text-lg">
-              Don't wait when disaster strikes. Our emergency response team is ready to help immediately.
-            </p>
-            <Button variant="corporate" size="lg" className="text-lg px-8 py-4 h-auto">
-              <Phone className="h-5 w-5 mr-2" />
-              Call Now: (555) 123-4567
-            </Button>
+        {/* Mission Statement */}
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-primary/10 rounded-3xl blur-3xl"></div>
+          <div className="relative bg-gradient-to-r from-primary to-primary-dark p-8 md:p-12 rounded-3xl shadow-2xl">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
+                <Phone className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Our Mission
+              </h3>
+              <p className="text-white/90 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+                We're proud to introduce United CCR (Construct, Clean, Restore) - your trusted partner for disaster restoration across Texas. 
+                With a commitment to fast response, flawless execution, and uncompromising quality, United CCR is here to restore your property after disaster strikes.
+              </p>
+              <a href="tel:8324668792">
+                <Button variant="corporate" size="lg" className="text-lg px-8 py-4 h-auto shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Phone className="h-5 w-5 mr-2" />
+                  Call Now: (832) 466-8792
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </div>

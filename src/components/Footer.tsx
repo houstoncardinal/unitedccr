@@ -7,15 +7,27 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="text-2xl font-bold mb-4">RestorePro</div>
+            <div className="flex items-center space-x-3 mb-4">
+              {/* Logo Image */}
+              <img 
+                src="/logo.jpg" 
+                alt="UNITED Logo" 
+                className="h-10 md:h-14 w-auto"
+              />
+            </div>
             <p className="text-white/80 mb-6">
-              Professional restoration and construction services since 1998. 
-              Licensed, insured, and committed to excellence.
+              We're proud to introduce United CCR (Construct, Clean, Restore) - your trusted partner for disaster restoration across Texas. With a commitment to fast response, flawless execution, and uncompromising quality, United CCR is here to restore your property after disaster strikes.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="h-6 w-6 text-white/60 hover:text-accent cursor-pointer transition-colors" />
-              <Instagram className="h-6 w-6 text-white/60 hover:text-accent cursor-pointer transition-colors" />
-              <Linkedin className="h-6 w-6 text-white/60 hover:text-accent cursor-pointer transition-colors" />
+              <a href="#" className="text-white/60 hover:text-white transition-colors">
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-white/60 hover:text-white transition-colors">
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-white/60 hover:text-white transition-colors">
+                <Linkedin className="h-6 w-6" />
+              </a>
             </div>
           </div>
 
@@ -23,12 +35,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2 text-white/80">
-              <li><a href="#" className="hover:text-accent transition-colors">Fire Damage Restoration</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Water Damage Restoration</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Storm Damage Restoration</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Mold Remediation</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Construction Services</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Roofing Services</a></li>
+              <li><a href="/disaster-restoration/fire-damage" className="hover:text-white transition-colors">Fire Damage Restoration</a></li>
+              <li><a href="/disaster-restoration/water-damage" className="hover:text-white transition-colors">Water Damage Restoration</a></li>
+              <li><a href="/disaster-restoration/storm-damage" className="hover:text-white transition-colors">Storm Damage Restoration</a></li>
+              <li><a href="/disaster-restoration/mold-remediation" className="hover:text-white transition-colors">Mold Damage Remediation</a></li>
+              <li><a href="/disaster-restoration/cleaning-services" className="hover:text-white transition-colors">Cleaning Services</a></li>
+              <li><a href="/disaster-restoration/roofing-services" className="hover:text-white transition-colors">Roofing Services</a></li>
             </ul>
           </div>
 
@@ -36,12 +48,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-white/80">
-              <li><a href="#about" className="hover:text-accent transition-colors">About Us</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors">Services</a></li>
-              <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Emergency Services</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Insurance Claims</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Testimonials</a></li>
+              <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/disaster-restoration" className="hover:text-white transition-colors">Services</a></li>
+              <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/contact" className="hover:text-white transition-colors">Get Free Assessment</a></li>
+              <li><a href="/contact" className="hover:text-white transition-colors">Disaster Restoration</a></li>
+              <li><a href="/contact" className="hover:text-white transition-colors">Texas Properties</a></li>
             </ul>
           </div>
 
@@ -50,21 +62,17 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-4 text-white/80">
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-accent" />
+                <Phone className="h-5 w-5 text-white" />
                 <div>
-                  <div className="font-semibold text-accent">(555) 123-4567</div>
-                  <div className="text-sm">24/7 Emergency</div>
+                  <a href="tel:8324668792" className="font-semibold text-white hover:text-white/80 transition-colors">(832) 466-8792</a>
+                  <div className="text-sm">Fast Response</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-accent" />
-                <div>info@restorepro.com</div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-accent" />
+                <MapPin className="h-5 w-5 text-white" />
                 <div>
-                  <div>123 Business Park Drive</div>
-                  <div>Your City, State 12345</div>
+                  <div>Based in Cypress, TX</div>
+                  <div>Serving Texas statewide</div>
                 </div>
               </div>
             </div>
@@ -75,12 +83,12 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-white/60 text-sm">
-              © 2024 RestorePro. All rights reserved. Licensed & Insured.
+              © 2024 United CCR. All rights reserved. Texas properties trust United CCR for disaster restoration.
             </div>
             <div className="flex space-x-6 text-sm text-white/60 mt-4 md:mt-0">
-              <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-accent transition-colors">Sitemap</a>
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-white transition-colors">Sitemap</a>
             </div>
           </div>
         </div>
