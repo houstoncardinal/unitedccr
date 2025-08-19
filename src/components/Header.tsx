@@ -8,14 +8,23 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary">RestorePro</div>
-            <div className="ml-2 text-sm text-muted-foreground">Professional Restoration</div>
+            <div className="text-2xl font-bold text-primary">United CCR</div>
+            <div className="ml-2 text-sm text-muted-foreground">Construct • Clean • Restore</div>
           </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">
-              Services
+            <a href="/disaster-restoration" className="text-foreground hover:text-primary transition-colors font-medium">
+              Disaster Restoration
+            </a>
+            <a href="/roofing-services" className="text-foreground hover:text-primary transition-colors font-medium">
+              Roofing
+            </a>
+            <a href="/construction-services" className="text-foreground hover:text-primary transition-colors font-medium">
+              Construction
+            </a>
+            <a href="/cleaning-services" className="text-foreground hover:text-primary transition-colors font-medium">
+              Cleaning
             </a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
               About
@@ -33,7 +42,7 @@ const Header = () => {
             </div>
             <Button variant="emergency" size="lg" className="flex items-center space-x-2">
               <Phone className="h-4 w-4" />
-              <span>(555) 123-4567</span>
+              <span>(832) 466-8792</span>
             </Button>
           </div>
         </div>

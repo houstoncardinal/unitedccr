@@ -18,21 +18,22 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl text-white">
+          <div className="text-lg font-semibold text-accent mb-4">UNITED CCR</div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Professional
-            <span className="block text-accent">Restoration</span>
-            <span className="block">Services</span>
+            Respond.
+            <span className="block text-accent">Recover.</span>
+            <span className="block">Restore.</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl">
-            24/7 Emergency Response • Fire, Water, Storm & Mold Damage Restoration
-            Expert Construction & Roofing Services
+            When disaster strikes, our trained and certified quick response teams are ready to deploy!
+            Serving Houston, TX and all of Texas with 24/7/365 emergency response.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
               <Phone className="h-5 w-5 mr-2" />
-              Emergency Response: (555) 123-4567
+              Emergency Response: (832) 466-8792
             </Button>
             <Button variant="corporate" size="lg" className="text-lg px-8 py-4 h-auto">
               Get Free Estimate
@@ -47,10 +48,13 @@ const Hero = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="h-6 w-6 text-accent" />
-              <span className="font-semibold">24/7 Emergency Response</span>
+              <span className="font-semibold">60 Minutes Response Time</span>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="font-semibold">★★★★★ 5.0 Google Reviews</span>
+              <span className="font-semibold">★★★★★ 5-Star Rated</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="font-semibold">100% Satisfaction Guarantee</span>
             </div>
           </div>
         </div>
