@@ -20,7 +20,7 @@ const FireDamageRestoration = () => {
       "url": "https://unitedccr.com",
       "logo": "https://unitedccr.com/emblem.jpg",
       "image": "https://unitedccr.com/thumbnail.png",
-      "telephone": "+1-832-683-7433",
+      "telephone": "+1-832-466-8792",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -182,8 +182,8 @@ const FireDamageRestoration = () => {
   return (
     <>
       <SEOHead
-        title="Fire Damage Restoration Services in Texas | United CCR - Emergency Response (832) 683-7433"
-        description="Professional fire damage restoration services in Texas. Complete smoke removal, soot cleanup, and structural restoration. Emergency response available. Call (832) 683-7433."
+        title="Fire Damage Restoration Services in Texas | United CCR - Emergency Response (832) 466-8792"
+        description="Professional fire damage restoration services in Texas. Complete smoke removal, soot cleanup, and structural restoration. Emergency response available. Call (832) 466-8792."
         keywords="fire damage restoration, smoke damage cleanup, soot removal, fire damage repair, structural restoration, Texas fire damage, Houston fire damage, emergency fire restoration, fire damage cleanup"
         canonical="https://unitedccr.com/disaster-restoration/fire-damage"
         schema={schema}
@@ -203,10 +203,10 @@ const FireDamageRestoration = () => {
                 Complete smoke removal, soot cleanup, and structural restoration services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:8326837433">
+                <a href="tel:8324668792">
                   <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                     <Phone className="h-5 w-5 mr-2" />
-                    Call Now: (832) 683-7433
+                    Call Now: (832) 466-8792
                   </Button>
                 </a>
                 <a href="/contact">
@@ -323,10 +323,10 @@ const FireDamageRestoration = () => {
               Don't wait when fire strikes your Texas property. Contact United CCR immediately for fast, professional fire damage restoration services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8326837433">
+              <a href="tel:8324668792">
                 <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                   <Phone className="h-5 w-5 mr-2" />
-                  Call Now: (832) 683-7433
+                  Call Now: (832) 466-8792
                 </Button>
               </a>
               <a href="/contact">

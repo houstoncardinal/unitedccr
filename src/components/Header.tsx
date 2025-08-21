@@ -152,10 +152,10 @@ const Header = () => {
             <a href="https://www.facebook.com/UNITEDCCR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Follow us on Facebook">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="tel:8326837433">
+            <a href="tel:8324668792">
               <Button variant="emergency" size="lg" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>(832) 683-7433</span>
+                <span>(832) 466-8792</span>
               </Button>
             </a>
           </div>
@@ -242,10 +242,10 @@ const Header = () => {
                   <span className="text-muted-foreground">24/7 Emergency</span>
                 </div>
                 <div className="flex items-center justify-between mb-4">
-                  <a href="tel:8326837433" onClick={() => setIsMobileMenuOpen(false)}>
+                  <a href="tel:8324668792" onClick={() => setIsMobileMenuOpen(false)}>
                     <Button variant="emergency" size="lg" className="flex items-center justify-center space-x-2">
                       <Phone className="h-4 w-4" />
-                      <span>(832) 683-7433</span>
+                      <span>(832) 466-8792</span>
                     </Button>
                   </a>
                   <a href="https://www.facebook.com/UNITEDCCR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors p-2" aria-label="Follow us on Facebook">

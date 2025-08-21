@@ -85,7 +85,7 @@ const CleaningServices = () => {
       "@type": "LocalBusiness",
       "name": "United CCR",
       "alternateName": "United Construct Clean Restore",
-      "telephone": "+1-832-683-7433",
+      "telephone": "+1-832-466-8792",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -143,7 +143,7 @@ const CleaningServices = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Post-Disaster Cleaning Services in Texas | Professional Cleaning & Sanitization - United CCR"
-        description="Professional post-disaster cleaning services in Texas. Complete cleaning, sanitization, and content restoration after fire, water, storm, or mold damage. Licensed, insured, and serving Houston & statewide. Call (832) 683-7433."
+        description="Professional post-disaster cleaning services in Texas. Complete cleaning, sanitization, and content restoration after fire, water, storm, or mold damage. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
         keywords="post-disaster cleaning Texas, disaster cleaning services, sanitization, content cleaning, Houston cleaning services, United CCR"
         canonical="https://unitedccr.com/disaster-restoration/cleaning-services"
         schema={schema}
@@ -162,10 +162,10 @@ const CleaningServices = () => {
               Complete cleaning and sanitization services after disaster damage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8326837433">
+              <a href="tel:8324668792">
                 <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                   <Phone className="h-5 w-5 mr-2" />
-                  Call Now: (832) 683-7433
+                  Call Now: (832) 466-8792
                 </Button>
               </a>
               <a href="/contact">
@@ -282,10 +282,10 @@ const CleaningServices = () => {
             Don't wait when disaster strikes your Texas property. Contact United CCR immediately for fast, professional post-disaster cleaning services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:8326837433">
+            <a href="tel:8324668792">
               <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                 <Phone className="h-5 w-5 mr-2" />
-                Call Now: (832) 683-7433
+                Call Now: (832) 466-8792
               </Button>
             </a>
             <a href="/contact">

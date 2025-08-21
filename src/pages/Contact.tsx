@@ -57,7 +57,7 @@ const Contact = () => {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact United CCR - Disaster Restoration Services in Texas",
-    "description": "Contact United CCR for professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Call (832) 683-7433.",
+    "description": "Contact United CCR for professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Call (832) 466-8792.",
     "url": "https://unitedccr.com/contact",
     "mainEntity": {
       "@type": "LocalBusiness",
@@ -67,7 +67,7 @@ const Contact = () => {
       "url": "https://unitedccr.com",
       "logo": "https://unitedccr.com/emblem.jpg",
       "image": "https://unitedccr.com/thumbnail.png",
-      "telephone": "+1-832-683-7433",
+      "telephone": "+1-832-466-8792",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -99,7 +99,7 @@ const Contact = () => {
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-832-683-7433",
+        "telephone": "+1-832-466-8792",
         "contactType": "customer service",
         "areaServed": "US",
         "availableLanguage": "English",
@@ -124,8 +124,8 @@ const Contact = () => {
   return (
     <>
       <SEOHead
-        title="Contact United CCR - Disaster Restoration Services in Texas | Emergency Response (832) 683-7433"
-        description="Contact United CCR for professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Call (832) 683-7433 for immediate assistance."
+        title="Contact United CCR - Disaster Restoration Services in Texas | Emergency Response (832) 466-8792"
+        description="Contact United CCR for professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Call (832) 466-8792 for immediate assistance."
         keywords="contact United CCR, disaster restoration contact, fire damage restoration contact, water damage restoration contact, storm damage restoration contact, mold remediation contact, Texas restoration services contact, emergency response contact"
         canonical="https://unitedccr.com/contact"
         schema={schema}
@@ -189,7 +189,7 @@ const Contact = () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <a href="tel:8326837433" className="text-3xl font-bold text-primary mb-2 hover:text-primary-dark transition-colors">(832) 683-7433</a>
+                      <a href="tel:8324668792" className="text-3xl font-bold text-primary mb-2 hover:text-primary-dark transition-colors">(832) 466-8792</a>
                       <p className="text-muted-foreground">Available for fast response service</p>
                     </CardContent>
                   </Card>
@@ -253,7 +253,7 @@ const Contact = () => {
                         We're here to keep your business running at its best.
                       </p>
                       <p className="text-muted-foreground leading-relaxed">
-                        Call our team at <a href="tel:8326837433" className="font-semibold text-primary hover:text-primary-dark transition-colors">(832) 683-7433</a> to learn how United CCR can help your Texas business!
+                        Call our team at <a href="tel:8324668792" className="font-semibold text-primary hover:text-primary-dark transition-colors">(832) 466-8792</a> to learn how United CCR can help your Texas business!
                       </p>
                     </CardContent>
                   </Card>
@@ -433,7 +433,7 @@ const Contact = () => {
                   <CardContent className="p-6">
                     <h4 className="text-lg font-bold text-primary mb-3">How quickly can you respond to service requests?</h4>
                     <p className="text-muted-foreground leading-relaxed">
-                      We provide fast response times to keep your business running at its best. Contact us at <a href="tel:8326837433" className="text-primary hover:text-primary-dark transition-colors">(832) 683-7433</a> for immediate assistance.
+                      We provide fast response times to keep your business running at its best. Contact us at <a href="tel:8324668792" className="text-primary hover:text-primary-dark transition-colors">(832) 466-8792</a> for immediate assistance.
                     </p>
                   </CardContent>
                 </Card>

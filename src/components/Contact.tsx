@@ -75,8 +75,8 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <a href="tel:8326837433" className="text-xl md:text-2xl font-bold text-primary mb-2 hover:text-primary-dark transition-colors">
-                  (832) 683-7433
+                <a href="tel:8324668792" className="text-xl md:text-2xl font-bold text-primary mb-2 hover:text-primary-dark transition-colors">
+                  (832) 466-8792
                 </a>
                 <p className="text-muted-foreground">Available for fast response service</p>
               </CardContent>
@@ -129,7 +129,7 @@ const Contact = () => {
                   We're here to restore your property after disaster strikes.
                 </p>
                 <p className="text-muted-foreground">
-                  Call our team at <a href="tel:8326837433" className="font-semibold text-primary hover:text-primary-dark transition-colors">(832) 683-7433</a> to learn how United CCR can help restore your Texas property after disaster!
+                  Call our team at <a href="tel:8324668792" className="font-semibold text-primary hover:text-primary-dark transition-colors">(832) 466-8792</a> to learn how United CCR can help restore your Texas property after disaster!
                 </p>
               </CardContent>
             </Card>
@@ -245,10 +245,10 @@ const Contact = () => {
                     <Send className="h-4 w-4 mr-2" />
                     {isSubmitting ? 'Sending...' : 'Schedule Consultation'}
                   </Button>
-                  <a href="tel:8326837433" className="block">
+                  <a href="tel:8324668792" className="block">
                     <Button variant="emergency" size="lg" className="w-full">
                       <Phone className="h-4 w-4 mr-2" />
-                      Call Now: (832) 683-7433
+                      Call Now: (832) 466-8792
                     </Button>
                   </a>
                 </div>
