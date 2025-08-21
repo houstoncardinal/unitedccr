@@ -85,7 +85,7 @@ const StormDamageRestoration = () => {
       "@type": "LocalBusiness",
       "name": "United CCR",
       "alternateName": "United Construct Clean Restore",
-      "telephone": "+1-832-466-8792",
+      "telephone": "+1-832-683-7433",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -143,7 +143,7 @@ const StormDamageRestoration = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Storm Damage Restoration in Texas | Emergency Roof Repairs & Structural Restoration - United CCR"
-        description="Professional storm damage restoration services in Texas. Emergency response for roof repairs, structural damage, and storm-related property restoration. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        description="Professional storm damage restoration services in Texas. Emergency response for roof repairs, structural damage, and storm-related property restoration. Licensed, insured, and serving Houston & statewide. Call (832) 683-7433."
         keywords="storm damage restoration Texas, emergency roof repairs, structural damage assessment, storm damage repair, Houston storm damage restoration, United CCR"
         canonical="https://unitedccr.com/disaster-restoration/storm-damage"
         schema={schema}
@@ -162,10 +162,10 @@ const StormDamageRestoration = () => {
               Complete storm damage repair and restoration services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8324668792">
+              <a href="tel:8326837433">
                 <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                   <Phone className="h-5 w-5 mr-2" />
-                  Call Now: (832) 466-8792
+                  Call Now: (832) 683-7433
                 </Button>
               </a>
               <a href="/contact">
@@ -282,10 +282,10 @@ const StormDamageRestoration = () => {
             Don't wait when storm damage strikes your Texas property. Contact United CCR immediately for fast, professional storm damage restoration services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:8324668792">
+            <a href="tel:8326837433">
               <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                 <Phone className="h-5 w-5 mr-2" />
-                Call Now: (832) 466-8792
+                Call Now: (832) 683-7433
               </Button>
             </a>
             <a href="/contact">

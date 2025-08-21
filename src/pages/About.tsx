@@ -20,7 +20,7 @@ const About = () => {
       "url": "https://unitedccr.com",
       "logo": "https://unitedccr.com/emblem.jpg",
       "image": "https://unitedccr.com/thumbnail.png",
-      "telephone": "+1-832-466-8792",
+      "telephone": "+1-832-683-7433",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -41,7 +41,7 @@ const About = () => {
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-832-466-8792",
+        "telephone": "+1-832-683-7433",
         "contactType": "customer service",
         "areaServed": "US",
         "availableLanguage": "English"
@@ -308,7 +308,7 @@ const About = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="h-5 w-5 text-primary" />
-                      <a href="tel:8324668792" className="text-muted-foreground hover:text-primary transition-colors">(832) 466-8792</a>
+                      <a href="tel:8326837433" className="text-muted-foreground hover:text-primary transition-colors">(832) 683-7433</a>
                     </div>
                   </div>
                 </div>

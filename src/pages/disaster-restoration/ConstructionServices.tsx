@@ -85,7 +85,7 @@ const ConstructionServices = () => {
       "@type": "LocalBusiness",
       "name": "United CCR",
       "alternateName": "United Construct Clean Restore",
-      "telephone": "+1-832-466-8792",
+      "telephone": "+1-832-683-7433",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -143,7 +143,7 @@ const ConstructionServices = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Disaster Construction Services in Texas | Emergency Repairs & Reconstruction - United CCR"
-        description="Professional disaster construction services in Texas. Complete reconstruction, emergency repairs, and post-disaster construction. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        description="Professional disaster construction services in Texas. Complete reconstruction, emergency repairs, and post-disaster construction. Licensed, insured, and serving Houston & statewide. Call (832) 683-7433."
         keywords="disaster construction services Texas, emergency repairs, reconstruction, post-disaster construction, Houston construction services, United CCR"
         canonical="https://unitedccr.com/disaster-restoration/construction-services"
         schema={schema}
@@ -162,10 +162,10 @@ const ConstructionServices = () => {
               Complete reconstruction and restoration services after disaster damage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8324668792">
+              <a href="tel:8326837433">
                 <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                   <Phone className="h-5 w-5 mr-2" />
-                  Call Now: (832) 466-8792
+                  Call Now: (832) 683-7433
                 </Button>
               </a>
               <a href="/contact">
@@ -282,10 +282,10 @@ const ConstructionServices = () => {
             Don't wait when disaster strikes your Texas property. Contact United CCR immediately for fast, professional disaster construction services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:8324668792">
+            <a href="tel:8326837433">
               <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                 <Phone className="h-5 w-5 mr-2" />
-                Call Now: (832) 466-8792
+                Call Now: (832) 683-7433
               </Button>
             </a>
             <a href="/contact">
