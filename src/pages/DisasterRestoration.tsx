@@ -83,13 +83,13 @@ const DisasterRestoration = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Disaster Restoration Services in Texas",
-    "description": "Professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Licensed, insured, and serving Houston & statewide.",
+    "description": "Professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Licensed, insured, and serving Houston & statewide. Call (832) 683-7433.",
     "url": "https://unitedccr.com/disaster-restoration",
     "provider": {
       "@type": "LocalBusiness",
       "name": "United CCR",
       "alternateName": "United Construct Clean Restore",
-      "telephone": "+1-832-466-8792",
+              "telephone": "+1-832-683-7433",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -163,7 +163,7 @@ const DisasterRestoration = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Disaster Restoration Services in Texas | Fire, Water, Storm & Mold Damage - United CCR"
-        description="Professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        description="Professional disaster restoration services in Texas. Emergency response for fire damage, water damage, storm damage, and mold remediation. Licensed, insured, and serving Houston & statewide. Call (832) 683-7433."
         keywords="disaster restoration Texas, fire damage restoration, water damage restoration, storm damage restoration, mold remediation, emergency response, property restoration, United CCR, Houston disaster restoration"
         canonical="https://unitedccr.com/disaster-restoration"
         schema={schema}
@@ -181,10 +181,10 @@ const DisasterRestoration = () => {
               Serving Texas with emergency response for fire, water, storm, and mold damage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8324668792">
+              <a href="tel:8326837433">
                 <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                   <Phone className="h-5 w-5 mr-2" />
-                  Emergency: (832) 466-8792
+                  Emergency: (832) 683-7433
                 </Button>
               </a>
               <a href="/contact">
@@ -301,10 +301,10 @@ const DisasterRestoration = () => {
             Don't wait when disaster strikes your Texas property. Contact United CCR immediately for fast, professional disaster restoration services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:8324668792">
+            <a href="tel:8326837433">
               <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                 <Phone className="h-5 w-5 mr-2" />
-                Emergency: (832) 466-8792
+                Emergency: (832) 683-7433
               </Button>
             </a>
             <a href="/contact">

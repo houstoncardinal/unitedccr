@@ -21,7 +21,7 @@ const Index = () => {
       "url": "https://unitedccr.com",
       "logo": "https://unitedccr.com/emblem.jpg",
       "image": "https://unitedccr.com/thumbnail.png",
-      "telephone": "+1-832-466-8792",
+              "telephone": "+1-832-683-7433",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",

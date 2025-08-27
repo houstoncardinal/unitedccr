@@ -85,7 +85,7 @@ const RoofingServices = () => {
       "@type": "LocalBusiness",
       "name": "United CCR",
       "alternateName": "United Construct Clean Restore",
-      "telephone": "+1-832-466-8792",
+              "telephone": "+1-832-683-7433",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -143,7 +143,7 @@ const RoofingServices = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Emergency Roofing Services in Texas | Storm & Fire Damage Roof Repairs - United CCR"
-        description="Professional emergency roofing services in Texas. Complete roof repairs, storm damage restoration, and preventive maintenance. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        description="Professional emergency roofing services in Texas. Complete roof repairs, storm damage restoration, and preventive maintenance. Licensed, insured, and serving Houston & statewide. Call (832) 683-7433."
         keywords="emergency roofing services Texas, roof repairs, storm damage roof repair, fire damage roof repair, Houston roofing services, United CCR"
         canonical="https://unitedccr.com/disaster-restoration/roofing-services"
         schema={schema}
@@ -162,10 +162,10 @@ const RoofingServices = () => {
               Complete roof repair and replacement services after disaster damage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8324668792">
+              <a href="tel:8326837433">
                 <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                   <Phone className="h-5 w-5 mr-2" />
-                  Call Now: (832) 466-8792
+                  Call Now: (832) 683-7433
                 </Button>
               </a>
               <a href="/contact">
@@ -282,10 +282,10 @@ const RoofingServices = () => {
             Don't wait when disaster strikes your Texas property. Contact United CCR immediately for fast, professional disaster roofing services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:8324668792">
+            <a href="tel:8326837433">
               <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                 <Phone className="h-5 w-5 mr-2" />
-                Call Now: (832) 466-8792
+                Call Now: (832) 683-7433
               </Button>
             </a>
             <a href="/contact">

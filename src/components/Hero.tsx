@@ -28,11 +28,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-12">
-            <a href="tel:8324668792" className="w-full sm:w-auto">
+            <a href="tel:8326837433" className="w-full sm:w-auto">
               <Button variant="emergency" size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-4 h-auto w-full sm:w-auto">
                 <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2" />
                 <span className="hidden sm:inline">Emergency Response: </span>
-                <span>(832) 466-8792</span>
+                <span>(832) 683-7433</span>
               </Button>
             </a>
             <a href="/contact" className="w-full sm:w-auto">

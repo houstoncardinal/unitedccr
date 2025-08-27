@@ -85,7 +85,7 @@ const WaterDamageRestoration = () => {
       "@type": "LocalBusiness",
       "name": "United CCR",
       "alternateName": "United Construct Clean Restore",
-      "telephone": "+1-832-466-8792",
+              "telephone": "+1-832-683-7433",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -143,7 +143,7 @@ const WaterDamageRestoration = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Water Damage Restoration in Texas | Emergency Response & Mold Prevention - United CCR"
-        description="Professional water damage restoration services in Texas. Emergency response for water extraction, structural drying, and mold prevention. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        description="Professional water damage restoration services in Texas. Emergency response for water extraction, structural drying, and mold prevention. Licensed, insured, and serving Houston & statewide. Call (832) 683-7433."
         keywords="water damage restoration Texas, water extraction, structural drying, mold prevention, emergency water damage response, Houston water damage restoration, United CCR"
         canonical="https://unitedccr.com/disaster-restoration/water-damage"
         schema={schema}
@@ -162,10 +162,10 @@ const WaterDamageRestoration = () => {
               From emergency water extraction to complete structural drying and restoration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8324668792">
+              <a href="tel:8326837433">
                 <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                   <Phone className="h-5 w-5 mr-2" />
-                  Call Now: (832) 466-8792
+                  Call Now: (832) 683-7433
                 </Button>
               </a>
               <a href="/contact">
@@ -282,10 +282,10 @@ const WaterDamageRestoration = () => {
             Don't wait when water damage strikes your Texas property. Contact United CCR immediately for fast, professional water damage restoration services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:8324668792">
+            <a href="tel:8326837433">
               <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                 <Phone className="h-5 w-5 mr-2" />
-                Call Now: (832) 466-8792
+                Call Now: (832) 683-7433
               </Button>
             </a>
             <a href="/contact">

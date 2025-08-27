@@ -20,7 +20,7 @@ const About = () => {
       "url": "https://unitedccr.com",
       "logo": "https://unitedccr.com/emblem.jpg",
       "image": "https://unitedccr.com/thumbnail.png",
-      "telephone": "+1-832-466-8792",
+              "telephone": "+1-832-683-7433",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -41,7 +41,7 @@ const About = () => {
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-832-466-8792",
+        "telephone": "+1-832-683-7433",
         "contactType": "customer service",
         "areaServed": "US",
         "availableLanguage": "English"
@@ -152,10 +152,10 @@ const About = () => {
                   Delivering premium construction, cleaning & maintenance, and restoration services for Texas businesses since our founding.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="tel:8324668792">
+                  <a href="tel:8326837433">
                     <Button variant="corporate" size="lg" className="text-lg px-8 py-4 h-auto">
                       <Phone className="h-5 w-5 mr-2" />
-                      Contact Us: (832) 466-8792
+                      Contact Us: (832) 683-7433
                     </Button>
                   </a>
                   <a href="/disaster-restoration">
@@ -308,7 +308,7 @@ const About = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="h-5 w-5 text-primary" />
-                      <a href="tel:8324668792" className="text-muted-foreground hover:text-primary transition-colors">(832) 466-8792</a>
+                      <a href="tel:8326837433" className="text-muted-foreground hover:text-primary transition-colors">(832) 683-7433</a>
                     </div>
                   </div>
                 </div>
@@ -320,10 +320,10 @@ const About = () => {
                       Whether you need construction, cleaning & maintenance, or restoration services, our team is here to help Texas businesses.
                     </p>
                     <div className="space-y-3">
-                      <a href="tel:8324668792">
+                      <a href="tel:8326837433">
                         <Button variant="corporate" size="lg" className="w-full">
                           <Phone className="h-4 w-4 mr-2" />
-                          Call Now: (832) 466-8792
+                          Call Now: (832) 683-7433
                         </Button>
                       </a>
                       <a href="/contact">

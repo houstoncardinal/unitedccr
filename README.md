@@ -234,7 +234,7 @@ npm run build
 
 For technical support or questions about the website:
 - **Email**: [support-email]
-- **Phone**: (832) 466-8792
+- **Phone**: (832) 683-7433
 - **Documentation**: See inline comments in code
 
 ## 📄 License

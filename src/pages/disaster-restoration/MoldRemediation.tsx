@@ -90,7 +90,7 @@ const MoldRemediation = () => {
       "@type": "LocalBusiness",
       "name": "United CCR",
       "alternateName": "United Construct Clean Restore",
-      "telephone": "+1-832-466-8792",
+              "telephone": "+1-832-683-7433",
       "email": "info@unitedccr.com",
       "address": {
         "@type": "PostalAddress",
@@ -148,7 +148,7 @@ const MoldRemediation = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Mold Remediation in Texas | Professional Mold Removal & Prevention - United CCR"
-        description="Professional mold remediation services in Texas. Complete mold inspection, safe removal, air quality testing, and prevention solutions. Licensed, insured, and serving Houston & statewide. Call (832) 466-8792."
+        description="Professional mold remediation services in Texas. Complete mold inspection, safe removal, air quality testing, and prevention solutions. Licensed, insured, and serving Houston & statewide. Call (832) 683-7433."
         keywords="mold remediation Texas, mold removal, mold inspection, air quality testing, mold prevention, Houston mold remediation, United CCR"
         canonical="https://unitedccr.com/disaster-restoration/mold-remediation"
         schema={schema}
@@ -167,10 +167,10 @@ const MoldRemediation = () => {
               From mold inspection to complete removal and prevention.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8324668792">
+              <a href="tel:8326837433">
                 <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                   <Phone className="h-5 w-5 mr-2" />
-                  Call Now: (832) 466-8792
+                  Call Now: (832) 683-7433
                 </Button>
               </a>
               <a href="/contact">
@@ -287,10 +287,10 @@ const MoldRemediation = () => {
             Don't wait when mold strikes your Texas property. Contact United CCR immediately for fast, professional mold remediation services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:8324668792">
+            <a href="tel:8326837433">
               <Button variant="emergency" size="lg" className="text-lg px-8 py-4 h-auto">
                 <Phone className="h-5 w-5 mr-2" />
-                Call Now: (832) 466-8792
+                Call Now: (832) 683-7433
               </Button>
             </a>
             <a href="/contact">
